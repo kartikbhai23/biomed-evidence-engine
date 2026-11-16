@@ -12,6 +12,11 @@ from app.store import DocumentStore, Passage
 
 
 _TOKEN_RE = re.compile(r"[A-Za-z0-9][A-Za-z0-9_-]+")
+_CONFIDENCE_STOPWORDS = {
+    "a", "an", "and", "are", "as", "at", "be", "before", "by", "for", "from",
+    "how", "i", "in", "is", "it", "of", "on", "or", "should", "that", "the",
+    "to", "what", "when", "where", "which", "with",
+}
 
 
 def tokenize(text: str) -> list[str]:
@@ -54,7 +59,7 @@ class HybridRetriever:
         lexical_rank = {idx: rank + 1 for rank, idx in enumerate(lexical_order)}
         tfidf_rank = {idx: rank + 1 for rank, idx in enumerate(tfidf_order)}
 
-        query_token_set = set(query_tokens)
+        query_token_set = {t for t in query_tokens if t not in _CONFIDENCE_STOPWORDS}
         fused: list[SearchHit] = []
         for idx, passage in enumerate(passages):
             rrf_score = (
