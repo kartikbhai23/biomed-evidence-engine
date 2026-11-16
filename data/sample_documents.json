@@ -1,0 +1,22 @@
+[
+  {
+    "document_id": "rna-seq-qc",
+    "title": "Synthetic RNA-seq Quality Control Playbook",
+    "text": "Before accepting a sequencing run, review read quality, adapter contamination, mapping behavior, duplication, and predefined sample-level acceptance criteria. Quality checks should be interpreted together rather than relying on a single metric.\n\nIf a sample fails a predefined threshold, record the reason, preserve the raw evidence, and route the sample for review instead of silently excluding it. The acceptance decision and any override should be auditable."
+  },
+  {
+    "document_id": "model-evaluation",
+    "title": "Synthetic Scientific ML Evaluation Guide",
+    "text": "A model evaluation set should be separated from training and model-selection data. For imbalanced scientific classification problems, report metrics that reflect minority-class performance in addition to aggregate discrimination.\n\nRegression tests should use a fixed evaluation set and explicit release thresholds. A model change should not be promoted simply because one headline metric improves if calibration, subgroup behavior, latency, or operational failure rates regress."
+  },
+  {
+    "document_id": "evidence-assistant",
+    "title": "Synthetic Evidence Assistant Operating Policy",
+    "text": "An evidence assistant should cite the passages supporting its answer and abstain when retrieval does not provide adequate support. Source identifiers should be stable enough to reproduce the evidence shown to a user.\n\nOperational logs should capture request identifiers, latency, retrieval counts, model or pipeline version, and error state. Sensitive document contents should not be copied into logs by default."
+  },
+  {
+    "document_id": "assay-ops",
+    "title": "Synthetic Assay Operations Note",
+    "text": "Assay workflows benefit from explicit acceptance criteria, versioned protocols, and traceable deviations. When a process changes, teams should document what changed and evaluate whether the change affects downstream interpretation.\n\nA human review step is appropriate when automated checks are inconclusive or when a result falls close to a decision boundary."
+  }
+]
