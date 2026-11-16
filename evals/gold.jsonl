@@ -1,0 +1,4 @@
+{"question":"What should be checked before a sequencing run is accepted?","expected_document_id":"rna-seq-qc"}
+{"question":"How should an evidence assistant behave when sources are weak?","expected_document_id":"evidence-assistant"}
+{"question":"What should be recorded when an automated assay check is inconclusive?","expected_document_id":"assay-ops"}
+{"question":"How should model changes be regression tested?","expected_document_id":"model-evaluation"}
