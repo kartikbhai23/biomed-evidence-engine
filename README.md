@@ -140,3 +140,8 @@ All sample documents are synthetic and exist only to demonstrate the system. The
 ## License
 
 MIT
+
+
+## Contributing
+
+Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for development guidance and scoped areas where another contributor can make a meaningful improvement.
